@@ -10,4 +10,7 @@ RUN apk update \
     postgresql-client \
     mysql-client
 
+ADD krb5.conf /etc/krb5.conf
+ADD ldap.conf /etc/openldap/ldap.conf
+
 CMD ["/bin/bash","-l"]
