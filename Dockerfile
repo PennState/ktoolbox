@@ -12,5 +12,6 @@ RUN apk update \
 
 ADD krb5.conf /etc/krb5.conf
 ADD ldap.conf /etc/openldap/ldap.conf
+ADD profile /etc/profile
 
 CMD ["/bin/bash","-l"]
