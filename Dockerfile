@@ -1,11 +1,13 @@
 FROM nicolaka/netshoot:latest
 
 RUN apk update \
- && apk upggrade \
+ && apk upgrade \
  && apk add --no-cache \
     openssh-client \
     openldap-clients \
     krb5 \
-    jq
+    jq \
+    postgresql-client \
+    mysql-client
 
 CMD ["/bin/bash","-l"]
