@@ -33,5 +33,9 @@ function title {
    echo -ne "\033]0;"$*"\007"  
 }
 
+# prevent timeouts when the API is being served through a LB that likes to 
+# sever idle connections by outputting null characters once a minute
+(while true ; do echo -ne "\000" ; sleep 59 ; done ) &
+
 prompt
 
