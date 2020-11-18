@@ -7,6 +7,8 @@ RUN apk update \
  && apk add --no-cache \
     openssh-client \
     openldap-clients \
+    ldapvi \
+    zsh \
     krb5 \
     jq \
     postgresql-client \
