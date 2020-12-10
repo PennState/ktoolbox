@@ -15,14 +15,14 @@ RUN apk update \
     postgresql-client \
     mysql-client \
     aws-cli \
-    git
+    git \
+    screen
 
 RUN curl -LO "https://github.com/Versent/saml2aws/releases/download/v${SAML2AWS_VERSION}/saml2aws_${SAML2AWS_VERSION}_linux_amd64.tar.gz" \
  && tar zxf "saml2aws_${SAML2AWS_VERSION}_linux_amd64.tar.gz" \
  && chmod +x saml2aws \
  && mv saml2aws /usr/local/bin/ \
  && rm -f "saml2aws_${SAML2AWS_VERSION}_linux_amd64.tar.gz"
-    screen
 
 RUN curl -LO "https://github.com/acobaugh/gofetch/releases/download/v${GOFETCH_VERSION}/gofetch_${GOFETCH_VERSION}_linux_amd64.tar.gz" \
  && chmod +x gofetch \
