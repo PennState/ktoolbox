@@ -27,7 +27,7 @@ RUN curl -q -LO "https://github.com/Versent/saml2aws/releases/download/v${SAML2A
 RUN curl -q -LO "https://github.com/acobaugh/gofetch/releases/download/v${GOFETCH_VERSION}/gofetch_${GOFETCH_VERSION}_linux_amd64.tar.gz" \
  && tar -xzvf "gofetch_${GOFETCH_VERSION}_linux_amd64.tar.gz" \
  && chmod +x gofetch \
- && mv gofetch  /usr/local/bin/fluxctl \
+ && mv gofetch  /usr/local/bin/gofetch \
  && rm -f gofetch*.tar.gz
 
 ADD krb5.conf /etc/krb5.conf
