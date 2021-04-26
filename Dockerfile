@@ -16,7 +16,8 @@ RUN apk update \
     mysql-client \
     aws-cli \
     git \
-    screen
+    screen \
+    rsync
 
 RUN curl -q -LO "https://github.com/Versent/saml2aws/releases/download/v${SAML2AWS_VERSION}/saml2aws_${SAML2AWS_VERSION}_linux_amd64.tar.gz" \
  && tar zxf "saml2aws_${SAML2AWS_VERSION}_linux_amd64.tar.gz" \
