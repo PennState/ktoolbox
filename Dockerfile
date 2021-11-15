@@ -35,5 +35,6 @@ ADD krb5.conf /etc/krb5.conf
 ADD ldap.conf /etc/openldap/ldap.conf
 ADD profile /etc/profile
 ADD bashrc /root/.bashrc
+ADD ldaprc /root/.ldaprc
 
 CMD ["/bin/bash","-l"]
